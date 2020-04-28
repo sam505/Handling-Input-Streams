@@ -35,6 +35,7 @@ def capture_stream(args):
     if not image_flag:
         # The second argument should be `cv2.VideoWriter_fourcc('M','J','P','G')`
         # on Mac, and `0x00000021` on Linux
+        # 0x7634706d worked for me on Linux
         # 100x100 to match desired resizing
         out = cv2.VideoWriter('out.mp4', 0x7634706d, 30, (100,100))
     else:
